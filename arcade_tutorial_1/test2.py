@@ -5,7 +5,7 @@ class MyGame(arcade.Window):
 
     def __init__(self):
         # Call the parent constructor
-        super().__init__(width=1920, height=1080)
+        super().__init__(width=800, height=600)
 
     def on_draw(self):
         # Clear the screen
