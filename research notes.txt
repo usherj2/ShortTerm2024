@@ -1,0 +1,45 @@
+Links and Notes for Short Term 2024
+
+Github 
+    https://github.com/usherj2/ShortTerm2024
+
+
+General 
+	Tools
+	    https://marketplace.visualstudio.com/items?itemName=stevensona.shader-toy
+
+https://www.shadertoy.com/new
+
+	Tutorials
+		HLSL?
+		https://youtu.be/f4s1h2YETNY?si=hPJianr6sJXzZzYL
+
+		GLSL
+		https://www.youtube.com/watch?v=3mfvZ-mdtZQ&t=1014s (syntax outdated)
+		
+Shadertoy
+    Tutorials
+        General
+            https://youtube.com/playlist?list=PLGmrMu-IwbguU_nY2egTFmlg691DN7uE5&si=D0-qRBFZUWJkW6J8
+		
+        Python Arcade Library
+        https://api.arcade.academy/en/stable/get_started.html
+        https://api.arcade.academy/en/stable/tutorials/shader_toy_particles/index.html
+
+        N body
+        https://www.shadertoy.com/view/3lVXz3
+        https://www.shadertoy.com/view/7scyW4
+
+        Boids
+        https://www.shadertoy.com/view/Mlc3Rl
+        https://www.shadertoy.com/view/MdlfDl
+        https://www.shadertoy.com/view/ldd3DB
+
+Unity
+    Tutorials	
+        General
+            https://youtu.be/JfC_ye23MvY?si=YbfQahnotdZekWW-	
+
+Porting Shadertoy to Unity
+    https://youtu.be/CzORVWFvZ28?si=dDrDrj30E96_qBs0
+    https://forum.unity.com/threads/shadertoy-glsl-porting-to-hlsl.766253/
