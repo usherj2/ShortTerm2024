@@ -4,7 +4,7 @@ precision mediump float;
 
 const float PI = 3.14159265358979;
 
-
+//from https://www.shadertoy.com/view/MtdSRf
 float circle(vec2 circle_pos, vec2 coord) {
     float circ_rad = 15.0;
     float circ_blur = 1.0;
