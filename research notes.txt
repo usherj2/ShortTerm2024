@@ -1,4 +1,4 @@
-Links and Notes for Short Term 2024
+Links and Notes for Short-Term 2024
 
 Github 
     https://github.com/usherj2/ShortTerm2024
@@ -17,7 +17,7 @@ https://www.shadertoy.com/new
 		GLSL
 		https://www.youtube.com/watch?v=3mfvZ-mdtZQ&t=1014s (syntax outdated)
 		
-Shadertoy
+ShaderToy
     Tutorials
         General
             https://youtube.com/playlist?list=PLGmrMu-IwbguU_nY2egTFmlg691DN7uE5&si=D0-qRBFZUWJkW6J8
@@ -25,6 +25,8 @@ Shadertoy
         Python Arcade Library
         https://api.arcade.academy/en/stable/get_started.html
         https://api.arcade.academy/en/stable/tutorials/shader_toy_particles/index.html
+        https://api.arcade.academy/en/latest/gl/buffer.html
+
 
         N body
         https://www.shadertoy.com/view/3lVXz3
@@ -40,6 +42,6 @@ Unity
         General
             https://youtu.be/JfC_ye23MvY?si=YbfQahnotdZekWW-	
 
-Porting Shadertoy to Unity
+Porting ShaderToy to Unity
     https://youtu.be/CzORVWFvZ28?si=dDrDrj30E96_qBs0
     https://forum.unity.com/threads/shadertoy-glsl-porting-to-hlsl.766253/
