@@ -6,19 +6,24 @@ class MyGame(arcade.Window):
 
     def __init__(self):
         # Call the parent constructor
-        super().__init__(width=1920, height=1080)
+        super().__init__(width=800, height=600)
 
+        self.time = 0.0
         # Load a file and create a shader from it
-        shader_file_path = "particle.glsl"
+        shader_file_path = "three_bodies.glsl"
         window_size = self.get_size()
         self.shadertoy = Shadertoy.create_from_file(window_size, shader_file_path)
 
     def on_draw(self):
         # Set uniform data to send to the GLSL shader
-        self.shadertoy.program['pos'] = self.mouse["x"]*2, self.mouse["y"]*2
-        self.shadertoy.program['color'] = arcade.get_three_float_color(arcade.color.ORANGE)
+        #self.shadertoy.program['pos'] = self.mouse["x"]*2, self.mouse["y"]*2
+        #self.shadertoy.program['color'] = arcade.get_three_float_color(arcade.color.ORANGE)
         # Run the GLSL code
-        self.shadertoy.render()
+        self.shadertoy.render(time = self.time)
+
+    def on_update(self, delta_time: float):
+        # Track run time
+        self.time += delta_time
 
 if __name__ == "__main__":
     MyGame()
