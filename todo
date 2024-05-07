@@ -1,6 +1,14 @@
-(done) Shader toy in python test project
+# TO DO LIST
 
-N body Gravity simulation in shader toy
+## DONE
+
+(done) Shader toy in python test project
+(done) Shader toy port worked! added delta time,
+    including multiple particles (circles)
+
+## WHAT'S LEFT
+
+Proper N body Gravity simulation in shader toy
 
 bare bones bird simulation
-artistic additions
+plus artistic additions
