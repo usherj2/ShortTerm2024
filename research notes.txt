@@ -7,8 +7,7 @@ Github
 General 
 	Tools
 	    https://marketplace.visualstudio.com/items?itemName=stevensona.shader-toy
-
-https://www.shadertoy.com/new
+        https://www.shadertoy.com/new
 
 	Tutorials
 		HLSL?
@@ -32,6 +31,13 @@ ShaderToy
         https://www.shadertoy.com/view/3lVXz3
         https://www.shadertoy.com/view/7scyW4
         https://www.shadertoy.com/view/MtdSRf
+        https://www.shadertoy.com/view/ctXXWH
+
+        Particles and User Interaction
+        https://www.shadertoy.com/view/wtGGRD
+        https://www.shadertoy.com/view/MldyWr
+        https://www.shadertoy.com/view/4tScD3
+        https://www.shadertoy.com/view/wlcfDB
 
         Boids
         https://www.shadertoy.com/view/Mlc3Rl
