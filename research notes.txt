@@ -15,7 +15,8 @@ General
 
 		GLSL
 		https://www.youtube.com/watch?v=3mfvZ-mdtZQ&t=1014s (syntax outdated)
-		
+        https://stackoverflow.com/questions/58461958/general-question-are-shading-languages-shaders-object-oriented
+
 ShaderToy
     Tutorials
         General
