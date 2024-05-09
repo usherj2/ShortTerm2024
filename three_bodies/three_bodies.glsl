@@ -22,14 +22,19 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord) {
     float rayon = 50.;
     
     float rayon2 = 100.;
+
+    float rayon3 = 150.;
     
     vec2 ptSurCercle = center + vec2(cos(PI * iTime), sin(PI* iTime)) * rayon;
     
-    vec2 ptSurCercle2 = center + vec2(cos(PI * iTime /0.5), sin(PI* iTime / 0.5)) * rayon2;
+    vec2 ptSurCercle2 = ptSurCercle + vec2(cos(PI * iTime /0.5), sin(PI* iTime / 0.5)) * rayon2;
+
+    vec2 circle4 = ptSurCercle2 + vec2(cos(PI * iTime /0.25), sin(PI * iTime / 0.25)) * rayon3;
     
     circles += circle( center, fragCoord.xy);          
     circles += circle( ptSurCercle, fragCoord.xy);
     circles += circle( ptSurCercle2, fragCoord.xy);
+    circles += circle( circle4, fragCoord.xy);
     
     
 
