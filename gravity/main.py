@@ -16,8 +16,6 @@ class MyGame(arcade.Window):
 
     def on_draw(self):
         # Set uniform data to send to the GLSL shader
-        #self.shadertoy.program['pos'] = self.mouse["x"]*2, self.mouse["y"]*2
-        #self.shadertoy.program['color'] = arcade.get_three_float_color(arcade.color.ORANGE)
         # Run the GLSL code
         self.shadertoy.render(time = self.time)
 
