@@ -3,7 +3,7 @@ precision mediump float;
 #endif
 
 const float PI = 3.14159265358979;
-const float G = 1;
+const float G = 40.0;
 
 float circle(float circ_rad, vec2 circle_pos, vec2 coord) {
     float circ_blur = 1.0;
@@ -15,40 +15,32 @@ vec2 orbit(float speed) {
     return vec2(cos(PI * iTime / speed), sin(PI * iTime / speed));
 }
 //thanks to https://stackoverflow.com/questions/58461958/general-question-are-shading-languages-shaders-object-oriented
+// and https://www.shadertoy.com/view/lllGR7
 struct body {
     float mass; 
     vec2 pos; 
     vec2 vel;
-    vec2 acc;
     float radius;
+
 }; //constructor for type body
-void new(inout body self, float mass, vec2 pos, vec2 vel, vec2 acc, float radius) {
+void new(inout body self, float mass, vec2 pos, vec2 vel, float radius) {
     self.mass = mass;
     self.pos = pos;
     self.vel = vel;
-    self.acc = acc;
     self.radius = radius;
 }
-vec2 gravity(body self, body other) { //doesnt seem to be updating every frame???
-    vec2 r = self.pos - other.pos / normalize(self.pos - other.pos);
-    vec2 Force = (G * self.mass * other.mass)*r / pow(length(r), 2.0);
-    self.acc = Force / self.mass;
-    return self.acc;
+float gravity(body self, body other) {
+    vec2 d = self.pos - other.pos;
+    float r = d.x*d.x + d.y*d.y;
+    return G * self.mass * other.mass / r;
 }
-vec2 update_pos(body self, body other) {
-    self.vel += gravity(self, other) * iTime;
-    return self.pos += self.vel * iTime;
+body update(inout body self, body other) {
+    vec2 d = other.pos - self.pos;
+    vec2 acc = d * gravity(self, other);
+    self.vel += acc / self.mass * iTime;
+    self.pos += self.vel * iTime;
+    return self;
 } 
-
-
-/* 
-a = F/m
-F = -g(r) = -G * (m1 * m2) / r**2
-F is gravitational force on both bodies
-
-float r = distance(body1.pos, body2.pos)
-*/
-
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord) {
     vec2 center = iResolution.xy;
@@ -56,37 +48,21 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord) {
     vec3 color2 = vec3(255., 255., 255.) /255.;
 
     vec2 test_vel = vec2(50., 50.);
-    vec2 test_acc = vec2(10., 10.);
 
     float objects = 0.;
 
     vec2 zero = vec2(0., 0.);
     
     body sun;
-    new(sun, 100000., center, zero, zero, 50.);
+    new(sun, 10., center, test_vel, 10.);
 
-    vec2 earth_start = center + vec2(200., 1.);
+    vec2 earth_start = center + vec2(-100., -100.); 
     body earth;
-    new(earth, 1., earth_start, zero, zero, 3.);
+    new(earth, 10., earth_start, vec2(30., 20.), 10.);
 
-    objects += circle(sun.radius, update_pos(sun, earth), fragCoord.xy);
-    objects += circle(earth.radius, update_pos(earth, sun), fragCoord.xy);
+    objects += circle(sun.radius, update(sun, earth).pos, fragCoord.xy);
+    objects += circle(earth.radius, update(earth, sun).pos, fragCoord.xy);
     
-    /*
-    float earth_dist = 300.;
-    float earth_speed = .5;
-
-    float moon_dist = 100.;
-    float moon_speed = .2;
-
-    vec2 earth_pos = center + (orbit(earth_speed) * earth_dist);
-    vec2 moon_pos = earth_pos + (orbit(moon_speed) * moon_dist);
-
-    objects += circle(sun.radius, sun.pos, fragCoord.xy);
-    objects += circle(20., earth_pos, fragCoord.xy);
-    objects += circle(10., moon_pos, fragCoord.xy);
-    */
-
     fragColor = mix(vec4(color1, 1.), vec4(color2, 1.), objects );
 }
 

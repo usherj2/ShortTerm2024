@@ -6,7 +6,7 @@ class MyGame(arcade.Window):
 
     def __init__(self):
         # Call the parent constructor
-        super().__init__(width=800, height=600)
+        super().__init__(width=1000, height=800)
 
         self.time = 0.0
         # Load a file and create a shader from it

@@ -15,7 +15,10 @@ General
 
 		GLSL
 		https://www.youtube.com/watch?v=3mfvZ-mdtZQ&t=1014s (syntax outdated)
-        https://stackoverflow.com/questions/58461958/general-question-are-shading-languages-shaders-object-oriented
+
+            Gravity
+            https://stackoverflow.com/questions/58461958/general-question-are-shading-languages-shaders-object-oriented
+            https://www.shadertoy.com/view/lllGR7
 
 ShaderToy
     Tutorials
@@ -26,6 +29,7 @@ ShaderToy
         https://api.arcade.academy/en/stable/get_started.html
         https://api.arcade.academy/en/stable/tutorials/shader_toy_particles/index.html
         https://api.arcade.academy/en/latest/gl/buffer.html
+        https://api.arcade.academy/en/stable/tutorials/compute_shader/index.html
 
 
         N body
