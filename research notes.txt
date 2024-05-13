@@ -15,6 +15,8 @@ General
 
 		GLSL
 		https://www.youtube.com/watch?v=3mfvZ-mdtZQ&t=1014s (syntax outdated)
+        https://en.wikibooks.org/wiki/GLSL_Programming/Vector_and_Matrix_Operations
+        
 
             Gravity
             https://stackoverflow.com/questions/58461958/general-question-are-shading-languages-shaders-object-oriented
@@ -24,6 +26,8 @@ ShaderToy
     Tutorials
         General
             https://youtube.com/playlist?list=PLGmrMu-IwbguU_nY2egTFmlg691DN7uE5&si=D0-qRBFZUWJkW6J8
+            https://www.shadertoy.com/view/llySRh
+
 		
         Python Arcade Library
         https://api.arcade.academy/en/stable/get_started.html

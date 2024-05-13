@@ -130,7 +130,7 @@ class MyWindow(arcade.Window):
         self.vao_1, self.vao_2 = self.vao_2, self.vao_1
 
         # Draw the graphs
-        self.perf_graph_list.draw()
+        # self.perf_graph_list.draw()
 
     def gen_initial_data(self):
         for i in range(self.num_balls):
