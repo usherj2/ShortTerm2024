@@ -6,11 +6,18 @@
 (done) Shader toy port worked! added delta time,
     including multiple particles (circles)
 (done) working gravity simulation between two bodies (slightly glitchy)
+(done) port of mandelbrot set
+
+## IDEAS
+
+original mandelbrot?
 
 ## WHAT'S LEFT
 
-Proper N body Gravity simulation in shader toy
+port basic Shader toy into unity
+Unity Compute shader setup (most basic implementation)
 
-bare bones boid simulation
+N body simulation
+boid simulation
 
 plus artistic additions
