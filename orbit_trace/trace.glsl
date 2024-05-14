@@ -72,7 +72,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord) {
     moon.pos = orbit(earth.pos, .70, 200.);
     rock.pos = orbit(moon.pos, .60, 75.);
 
-    vec2 uv = (fragCoord- .5 * iResolution.xy) / iResolution.y;
+    vec2 uv = (fragCoord - .5*iResolution.xy) / min(iResolution.x, iResolution.y);
     float px = 1.0 / iResolution.y;
     float d = distance(uv, rock.pos);
 

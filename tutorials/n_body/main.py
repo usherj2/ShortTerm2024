@@ -12,12 +12,6 @@ from arcade.gl import BufferDescription
 WINDOW_WIDTH = 2300
 WINDOW_HEIGHT = 1300
 
-# Size of performance graphs
-GRAPH_WIDTH = 200
-GRAPH_HEIGHT = 120
-GRAPH_MARGIN = 5
-
-
 class MyWindow(arcade.Window):
 
     def __init__(self):
@@ -27,15 +21,13 @@ class MyWindow(arcade.Window):
         self.center_window()
 
         # --- Class instance variables
-
         # Number of balls to move
-        self.num_balls = 40000
+        self.num_balls = 1000
 
         # This has something to do with how we break the calculations up
         # and parallelize them.
         self.group_x = 256
         self.group_y = 1
-
         # --- Create buffers
 
         # Format of the buffer data.
@@ -88,20 +80,6 @@ class MyWindow(arcade.Window):
             fragment_shader=fragment_shader_source,
         )
 
-        # --- Create FPS graph
-
-        # Enable timings for the performance graph
-        arcade.enable_timings()
-
-        # Create a sprite list to put the performance graph into
-        self.perf_graph_list = arcade.SpriteList()
-
-        # Create the FPS performance graph
-        graph = arcade.PerfGraph(GRAPH_WIDTH, GRAPH_HEIGHT, graph_data="FPS")
-        graph.center_x = GRAPH_WIDTH / 2
-        graph.center_y = self.height - GRAPH_HEIGHT / 2
-        self.perf_graph_list.append(graph)
-
     def on_draw(self):
         # Clear the screen
         self.clear()
@@ -151,7 +129,6 @@ class MyWindow(arcade.Window):
             yield 1.0  # g
             yield 1.0  # b
             yield 1.0  # a
-
 
 app = MyWindow()
 arcade.run()

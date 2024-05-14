@@ -17,10 +17,14 @@ General
 		https://www.youtube.com/watch?v=3mfvZ-mdtZQ&t=1014s (syntax outdated)
         https://en.wikibooks.org/wiki/GLSL_Programming/Vector_and_Matrix_Operations
         
+        https://arugl.medium.com/particle-interaction-on-gpu-shaders-particle-physics-logic-in-webgl-compute-dc31a4e7b9cc
+        
 
             Gravity
             https://stackoverflow.com/questions/58461958/general-question-are-shading-languages-shaders-object-oriented
             https://www.shadertoy.com/view/lllGR7
+
+    Inspiration
 
 ShaderToy
     Tutorials
@@ -28,7 +32,10 @@ ShaderToy
             https://youtube.com/playlist?list=PLGmrMu-IwbguU_nY2egTFmlg691DN7uE5&si=D0-qRBFZUWJkW6J8
             https://www.shadertoy.com/view/llySRh
 
-		
+        Mandelbrot
+        https://www.shadertoy.com/view/XcBSzz
+
+
         Python Arcade Library
         https://api.arcade.academy/en/stable/get_started.html
         https://api.arcade.academy/en/stable/tutorials/shader_toy_particles/index.html
@@ -41,6 +48,7 @@ ShaderToy
         https://www.shadertoy.com/view/7scyW4
         https://www.shadertoy.com/view/MtdSRf
         https://www.shadertoy.com/view/ctXXWH
+        https://www.shadertoy.com/view/lllBWS
 
         Particles and User Interaction
         https://www.shadertoy.com/view/wtGGRD
@@ -51,7 +59,11 @@ ShaderToy
         Boids
         https://www.shadertoy.com/view/Mlc3Rl
         https://www.shadertoy.com/view/MdlfDl
+
         https://www.shadertoy.com/view/ldd3DB
+
+        https://www.shadertoy.com/view/lXXXzl
+
 
 Unity
     Tutorials	
@@ -59,5 +71,9 @@ Unity
             https://youtu.be/JfC_ye23MvY?si=YbfQahnotdZekWW-	
 
 Porting ShaderToy to Unity
+    https://github.com/candycat1992/Shadertoy_Lab
+
+    https://forum.unity.com/threads/converting-a-shadertoy-multipass-shader-to-unity-hlsl.418238/#post-3326547
+
     https://youtu.be/CzORVWFvZ28?si=dDrDrj30E96_qBs0
     https://forum.unity.com/threads/shadertoy-glsl-porting-to-hlsl.766253/
