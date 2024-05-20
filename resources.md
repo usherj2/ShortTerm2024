@@ -27,8 +27,8 @@
 
 ### Inspiration
 
-    https://www.youtube.com/watch?v=n0PcN0K8EVI
-
+    https://emergentbehavior.com/i-have-the-power-of-compute-shaders/
+    
 ## ShaderToy
 
 ### Examples
@@ -52,6 +52,9 @@
     https://www.shadertoy.com/view/MtdSRf
     https://www.shadertoy.com/view/ctXXWH
     https://www.shadertoy.com/view/lllBWS
+
+    (good and simple)
+    https://www.shadertoy.com/view/4ddGDB
 
     **Particles and User Interaction**
     https://www.shadertoy.com/view/wtGGRD
