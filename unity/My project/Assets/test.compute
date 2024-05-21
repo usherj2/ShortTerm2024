@@ -1,0 +1,59 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel Update
+
+struct Agent {
+    float2 position;
+    float angle;
+};
+
+// Hash function www.cs.ubc.ca/~rbridson/docs/schechter-sca08-turbulence.pdf
+uint hash(uint state)
+{
+    state ^= 2747636419u;
+    state *= 2654435769u;
+    state ^= state >> 16;
+    state *= 2654435769u;
+    state ^= state >> 16;
+    state *= 2654435769u;
+    return state;
+}
+
+float scaleToRange01(uint state)
+{
+    return state / 4294967295.0;
+}
+
+RWStructuredBuffer<Agent> agents;
+uint numAgents;
+
+RWTexture2D<float4> Result;
+int width;
+int height;
+
+float deltaTime;
+float time;
+float moveSpeed = 10.0;
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+
+[numthreads(8,8,1)]
+void Update (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= numAgents){
+        return; 
+    }
+    Agent agent = agents[id.x];
+    uint random = hash(agent.position.y * width + agent.position.x * hash(id.x));
+
+    float2 direction = float2(cos(agent.angle), sin(agent.angle));
+    float2 newPos = agent.position + direction * moveSpeed * deltaTime;
+
+    if (newPos.x < 0 || newPos.x >= width || newPos.y < 0 || newPos.y >= height) {
+        newPos.x = min(width-0.01, max(0,newPos.x));
+        newPos.y = min(height-0.01, max(0,newPos.y));
+        agents[id.x].angle = scaleToRange01(random) * 2 * 3.1415;
+    }
+    agents[id.x].position = newPos;
+
+    Result[int2(newPos.x, newPos.y)] = 1; 
+}
